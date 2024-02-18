@@ -134,8 +134,8 @@ const ReportEmployees = async (req, res) => {
           STRING_AGG(e3.level::text, ', ') AS education_levels,
           e4.family_data
         FROM employees AS e1
-        INNER JOIN employee_profiles AS e2 ON e1.id = e2.employee_id
-        INNER JOIN education AS e3 ON e1.id = e3.employee_id
+        LEFT JOIN employee_profiles AS e2 ON e1.id = e2.employee_id
+        LEFT JOIN education AS e3 ON e1.id = e3.employee_id
         LEFT JOIN sum_fam_3 AS e4 ON e1.id = e4.employee_id
         GROUP BY e2.employee_id, e1.name, e1.is_active, e2.gender, e2.date_of_birth, e4.family_data;
       `;
