@@ -1,0 +1,956 @@
+{
+	"info": {
+		"_postman_id": "39bd3602-ef1a-4a8d-a3bc-791b5a12d7c5",
+		"name": "REST API Employee - Risma Faoziya",
+		"description": "Dokumentasi ini berisi testing operasi CRUD pada REST API Employee yang melibatkan 4 data yaitu data Employee, Employee Profile, Education, dan Employee Family. Test dikatakan berhasil apabila test statusnya = 200/201/204.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18842495"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Get All Employees",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/allEmployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"allEmployees"
+							]
+						},
+						"description": "Get All Employee merupakan request `GET` yang digunakan untuk mendapatkan semua data employee beserta relasinya ke data EmployeeProfile, Education, dan EmployeeFamily."
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						},
+						"description": "Get One Employee merupakan request `GET` yang digunakan untuk mendapatkan 1 data employee beserta relasinya ke data EmployeeProfile, Education, dan EmployeeFamily berdasarkan id nya. Request diatas bertujuan untuk mendapatkan data employee dengan id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nik\" : \"11078\",\r\n    \"name\" : \"James\",\r\n    \"is_active\" : 1,\r\n    \"start_date\" : \"2024-02-02\",\r\n    \"end_date\" : \"2032-02-02\",\r\n    \"created_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/addEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"addEmployee"
+							]
+						},
+						"description": "Create Employee merupakan request `POST` yang digunakan untuk membuat data employee."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nik\" : \"11078\",\r\n    \"name\" : \"James Carden\",\r\n    \"is_active\" : 1,\r\n    \"start_date\" : \"2024-02-02\",\r\n    \"end_date\" : \"2032-02-02\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"4"
+							]
+						},
+						"description": "Update Employee merupakan request `PUT` yang digunakan untuk mengedit data employee berdasarkan id nya. Request diatas bertujuan untuk mengedit data employee dengan id = 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"4"
+							]
+						},
+						"description": "Delete Employee merupakan request `DELETE` yang digunakan untuk menghapus data employee berdasarkan id nya. Request diatas bertujuan untuk menghapus data employee dengan id = 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Report Employees",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/reportEmployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"reportEmployees"
+							]
+						},
+						"description": "Report Employees merupakan request `GET` yang digunakan untuk mendapatkan ringkasan data employee seperti:\n\n- employee_id : identifier employee\n- name : nama employee\n- is_active : keterangan pegawai aktif (false : non-aktif, true : aktif)\n- gender : jenis kelamin employee\n- age : umur employee\n- school_name : nama instansi pendidikan employee\n- level : tingkat pendidikan employee\n- family_data : ringkasan data employee family terkait jumlah istri/suami/anak/anak sambung."
+					},
+					"response": []
+				}
+			],
+			"description": "Data ini mengacu pada data employee yang merujuk pada Employee Model dan tabel employees pada database. Data employee memiliki 10 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee\n2. nik : nomor induk kependudukan employee\n3. name : nama employee\n4. is_active : keterangan pegawai aktif (false : non-aktif, true : aktif)\n5. start_date : keterangan waktu employee mulai bekerja\n6. end_date : keterangan waktu employee berhenti bekerja\n7. created_by : pembuat data\n8. updated_by : pengedit data\n9. created_at : keterangan waktu data employee dibuat\n10. updated_at : keterangan waktu data employee terakhir kali diedit\n    \n\nTerdapat 6 operasi/perintah yang dilakukan pada data employee yaitu:\n\n- Get All Employees\n- Get One Employee\n- Create Employee\n- Update Employee\n- Delete Employee\n- Report Employees"
+		},
+		{
+			"name": "Employee Profile",
+			"item": [
+				{
+					"name": "Get All Employee's Profiles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeProfiles/allEmployeeProfiles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeProfiles",
+								"allEmployeeProfiles"
+							]
+						},
+						"description": "Get All Employee Profiles merupakan request `GET` yang digunakan untuk mendapatkan semua data profil employee."
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Employee Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeProfiles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeProfiles",
+								"1"
+							]
+						},
+						"description": "Get One Employee Profile merupakan request `GET` yang digunakan untuk mendapatkan 1 data profil employee berdasarkan employee_id nya. Request diatas bertujuan untuk mendapatkan data employee profile yang memiliki employee_id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"place_of_birth\" : \"Jakarta\",\r\n    \"date_of_birth\": \"1997-05-02\",\r\n    \"gender\": \"Laki-Laki\",\r\n    \"is_married\": 1,\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employeeProfiles/addEmployeeProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeProfiles",
+								"addEmployeeProfile"
+							]
+						},
+						"description": "Create Employee Profile merupakan request `POST` yang digunakan untuk membuat data profil employee."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"place_of_birth\" : \"Sumatra Barat\",\r\n    \"date_of_birth\": \"1999-07-22\",\r\n    \"gender\": \"Laki-Laki\",\r\n    \"is_married\": 1,\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employeeProfiles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeProfiles",
+								"3"
+							]
+						},
+						"description": "Update Employee Profile merupakan request `PUT` yang digunakan untuk mengedit data profil employee berdasarkan employee_id nya. Request diatas bertujuan untuk mengedit data employee profile yang memiliki employee_id = 3."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeProfiles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeProfiles",
+								"3"
+							]
+						},
+						"description": "Delete Employee Profilemerupakan request yang digunakan untuk menghapus data profil employee berdasarkan employee_id nya. Request diatas bertujuan untuk menghapus data employee profile yang memiliki employee_id = 3."
+					},
+					"response": []
+				}
+			],
+			"description": "Data ini mengacu pada data profil employee yang merujuk pada EmployeeProfile Model dan tabel employee_profiles pada database. Data profil employee memiliki 11 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee profile\n2. employee_id (Foreign Key) : identifier employee\n3. place_of_birth : keterangan tempat lahir employee\n4. date_of_birth : keterangan waktu lahir employee\n5. gender : jenis kelamin employee\n6. is_married : keterangan employee sudah menikah (false: belum menikah, true: sudah menikah)\n7. prof_pict : profile picture employee\n8. created_by : keterangan pembuat data\n9. updated_by : keterangan pengedit data\n10. created_at : keterangan waktu data employee dibuat\n11. updated_at : keterangan waktu data employee terakhir kali diedit\n    \n\nTerdapat 5 operasi/perintah yang dilakukan pada data employee yaitu:\n\n- Get All Employee Profiles\n- Get One Employee Profile\n- Create Employee Profile\n- Update Employee Profile\n    \n- Delete Employee Profile"
+		},
+		{
+			"name": "Education",
+			"item": [
+				{
+					"name": "Get All Educations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/educations/allEmployeeEducations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"allEmployeeEducations"
+							]
+						},
+						"description": "Get All Educations merupakan request `GET` yang digunakan untuk mendapatkan semua data education employee."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee's Education",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/educations/by_employee_id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"by_employee_id",
+								"1"
+							]
+						},
+						"description": "Get Education Employee merupakan request `GET` yang digunakan untuk mendapatkan 1 data education employee berdasarkan employee_id nya. Request diatas bertujuan untuk mendapatkan data education employee yang memiliki employee_id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Education Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/educations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"1"
+							]
+						},
+						"description": "Get Education Detail merupakan request `GET` yang digunakan untuk mendapatkan detail education employee berdasarkan id nya. Request diatas bertujuan untuk mendapatkan data education employee yang memiliki id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Education",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"name\" : \"Universitas Diponegoro\",\r\n    \"level\": \"Strata 1\",\r\n    \"description\": \"Sarjana\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/educations/addEmployeeEducation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"addEmployeeEducation"
+							]
+						},
+						"description": "Create Education merupakan request `POST` yang digunakan untuk membuat data education employee."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Education",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"name\" : \"Universitas Airlangga\",\r\n    \"level\": \"Strata 1\",\r\n    \"description\": \"Sarjana\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/educations/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"3"
+							]
+						},
+						"description": "Update Education merupakan request `PUT` yang digunakan untuk mengedit data education employee berdasarkan id nya. Request diatas bertujuan untuk mengedit data education employee yang memiliki id = 3."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Education",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/educations/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"educations",
+								"3"
+							]
+						},
+						"description": "Delete Education merupakan request `DELETE` yang digunakan untuk menghapus data education employee berdasarkan id nya. Request diatas bertujuan untuk menghapus data education employee yang memiliki id = 3."
+					},
+					"response": []
+				}
+			],
+			"description": "Data ini mengacu pada data pendidikan employee yang merujuk pada Education Model dan tabel education pada database. Data education employee memiliki 9 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee education\n2. employee_id (Foreign Key) : identifier employee\n3. name : nama instansi pendidikan employee\n4. level : tingkat pendidikan employee (TK/SD/SMP/SMA/Strata 1/Strata 2/Doktor/Professor)\n5. description : penjelasan pendidikan employee\n6. created_by : keterangan pembuat data\n7. updated_by : keterangan pengedit data\n8. created_at : keterangan waktu data education employee dibuat\n9. updated_at : keterangan waktu data education employee terakhir kali diedit\n    \n\nTerdapat 6 operasi/perintah yang dilakukan pada data employee yaitu:\n\n- Get All Educations\n- Get Education Employee\n- Get Education Detail\n- Create Education\n- Update Education\n- Delete Education"
+		},
+		{
+			"name": "Employee Family",
+			"item": [
+				{
+					"name": "Get All Employee's Families",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/allEmployeeFamilys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"allEmployeeFamilys"
+							]
+						},
+						"description": "Get All Employee's Familiesmerupakan request `GET` yang digunakan untuk mendapatkan semua data employee family."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee's Family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/by_employee_id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"by_employee_id",
+								"1"
+							]
+						},
+						"description": "Get Employee's Family merupakan request `GET` yang digunakan untuk mendapatkan 1 data employee family berdasarkan employee_id nya. Request diatas bertujuan untuk mendapatkan data employee family yang memiliki employee_id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Family Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"1"
+							]
+						},
+						"description": "Get Family Detail merupakan request `GET` yang digunakan untuk mendapatkan detail employee family berdasarkan id nya. Request diatas bertujuan untuk mendapatkan data employee family yang memiliki id = 1."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee Family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"name\" : \"Rystalline\",\r\n    \"identifier\": \"32100594198030021\",\r\n    \"job\": \"Data Scientist\",\r\n    \"place_of_birth\": \"New York\",\r\n    \"date_of_birth\": \"1985-09-25\",\r\n    \"religion\": \"Islam\",\r\n    \"is_life\": 1,\r\n    \"is_divorced\": 0,\r\n    \"relation_status\": \"Istri\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/addEmployeeFamily",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"addEmployeeFamily"
+							]
+						},
+						"description": "Create Employee Family merupakan request `POST` yang digunakan untuk membuat data employee family."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"name\" : \"Rystalline\",\r\n    \"identifier\": \"32100594198030021\",\r\n    \"job\": \"Data Scientist\",\r\n    \"place_of_birth\": \"New York\",\r\n    \"date_of_birth\": \"1985-09-25\",\r\n    \"religion\": \"Islam\",\r\n    \"is_life\": 1,\r\n    \"is_divorced\": 0,\r\n    \"relation_status\": \"Istri\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"4"
+							]
+						},
+						"description": "Update Employee Family merupakan request `PUT` yang digunakan untuk mengedit data employee family berdasarkan id nya. Request diatas bertujuan untuk mengedit data employee family yang memiliki id = 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Family",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employeeFamilys/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employeeFamilys",
+								"4"
+							]
+						},
+						"description": "Delete Employee Family merupakan request `DELETE` yang digunakan untuk menghapus data employee family berdasarkan id nya. Request diatas bertujuan untuk menghapus data employee family yang memiliki id = 4."
+					},
+					"response": []
+				}
+			],
+			"description": "Data ini mengacu pada data keluarga employee yang merujuk pada employee_family Model dan tabel employee_families pada database. Data education employee memiliki 15 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee family\n2. employee_id (Foreign Key) : identifier employee\n3. name : nama employee family (person)\n4. identifier : nomor kependudukan employee family\n5. job : pekerjaan employee family\n6. place_of_birth : tempat lahir employee family\n7. date_of_birth : tanggal lahir employee family\n8. religion : agama employee family\n9. is_life : keterangan apakah employee family masih hidup (false : sudah meninggal, true : masih hidup)\n10. is_divorced : keterangan apakah employee family sudah bercerai (false : tidak bercerai, true : sudah bercerai)\n11. created_by : keterangan pembuat data\n12. updated_by : keterangan pengedit data\n13. created_at : keterangan waktu data employee family dibuat\n14. updated_at : keterangan waktu data employee family terakhir kali diedit\n    \n\nTerdapat 6 operasi/perintah yang dilakukan pada data employee family yaitu:\n\n- Get All Employee's Families\n- Get Employee's Family\n- Get Family Detail\n- Create Employee Family\n- Update Employee Family\n- Delete Employee Family"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
