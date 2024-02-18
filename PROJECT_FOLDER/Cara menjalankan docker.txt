@@ -1,0 +1,5 @@
+Cara menjalankan docker pada terminal:
+1. run container node_db dengan perintah: docker compose -d node_db
+2. untuk mengecek database yang telah dibuat dengan perintah : docker ps -a
+3. build docker compose dengan perintah : docker compose build
+4. run docker compose dengan perintah : docker compose up

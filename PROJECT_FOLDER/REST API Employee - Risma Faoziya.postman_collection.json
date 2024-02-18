@@ -29,12 +29,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employees/allEmployees",
+							"raw": "http://localhost:3000/api/employees/allEmployees",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -64,12 +64,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employees/1",
+							"raw": "http://localhost:3000/api/employees/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -101,7 +101,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nik\" : \"11078\",\r\n    \"name\" : \"James\",\r\n    \"is_active\" : 1,\r\n    \"start_date\" : \"2024-02-02\",\r\n    \"end_date\" : \"2032-02-02\",\r\n    \"created_by\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"nik\" : \"11015\",\r\n    \"name\" : \"James\",\r\n    \"is_active\" : 1,\r\n    \"start_date\" : \"2024-02-02\",\r\n    \"end_date\" : \"2032-02-02\",\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,12 +109,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employees/addEmployee",
+							"raw": "http://localhost:3000/api/employees/addEmployee",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -154,12 +154,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employees/4",
+							"raw": "http://localhost:3000/api/employees/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -190,12 +190,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employees/4",
+							"raw": "http://localhost:3000/api/employees/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -225,12 +225,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employees/reportEmployees",
+							"raw": "http://localhost:3000/api/employees/reportEmployees",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employees",
@@ -266,12 +266,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeProfiles/allEmployeeProfiles",
+							"raw": "http://localhost:3000/api/employeeProfiles/allEmployeeProfiles",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeProfiles",
@@ -301,12 +301,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeProfiles/1",
+							"raw": "http://localhost:3000/api/employeeProfiles/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeProfiles",
@@ -338,7 +338,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"place_of_birth\" : \"Jakarta\",\r\n    \"date_of_birth\": \"1997-05-02\",\r\n    \"gender\": \"Laki-Laki\",\r\n    \"is_married\": 1,\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"employee_id\" : 3,\r\n    \"place_of_birth\" : \"Sumatra Barat\",\r\n    \"date_of_birth\": \"1999-07-21\",\r\n    \"gender\": \"Laki-Laki\",\r\n    \"is_married\": 1,\r\n    \"created_by\": \"admin\",\r\n    \"updated_by\": \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -346,12 +346,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employeeProfiles/addEmployeeProfile",
+							"raw": "http://localhost:3000/api/employeeProfiles/addEmployeeProfile",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeProfiles",
@@ -391,12 +391,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employeeProfiles/3",
+							"raw": "http://localhost:3000/api/employeeProfiles/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeProfiles",
@@ -427,12 +427,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeProfiles/3",
+							"raw": "http://localhost:3000/api/employeeProfiles/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeProfiles",
@@ -444,7 +444,7 @@
 					"response": []
 				}
 			],
-			"description": "Data ini mengacu pada data profil employee yang merujuk pada EmployeeProfile Model dan tabel employee_profiles pada database. Data profil employee memiliki 11 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee profile\n2. employee_id (Foreign Key) : identifier employee\n3. place_of_birth : keterangan tempat lahir employee\n4. date_of_birth : keterangan waktu lahir employee\n5. gender : jenis kelamin employee\n6. is_married : keterangan employee sudah menikah (false: belum menikah, true: sudah menikah)\n7. prof_pict : profile picture employee\n8. created_by : keterangan pembuat data\n9. updated_by : keterangan pengedit data\n10. created_at : keterangan waktu data employee dibuat\n11. updated_at : keterangan waktu data employee terakhir kali diedit\n    \n\nTerdapat 5 operasi/perintah yang dilakukan pada data employee yaitu:\n\n- Get All Employee Profiles\n- Get One Employee Profile\n- Create Employee Profile\n- Update Employee Profile\n    \n- Delete Employee Profile"
+			"description": "Data ini mengacu pada data profil employee yang merujuk pada EmployeeProfile Model dan tabel employee_profiles pada database. Data profil employee memiliki 11 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee profile\n2. employee_id (Foreign Key) : identifier employee\n3. place_of_birth : keterangan tempat lahir employee\n4. date_of_birth : keterangan waktu lahir employee\n5. gender : jenis kelamin employee\n6. is_married : keterangan employee sudah menikah (false: belum menikah, true: sudah menikah)\n7. prof_pict : profile picture employee\n8. created_by : keterangan pembuat data\n9. updated_by : keterangan pengedit data\n10. created_at : keterangan waktu data employee dibuat\n11. updated_at : keterangan waktu data employee terakhir kali diedit\n    \n\nData Employee Profile memiliki relasi ke data Employee yaitu One-to-One. Terdapat 5 operasi/perintah yang dilakukan pada data employee yaitu:\n\n- Get All Employee Profiles\n- Get One Employee Profile\n- Create Employee Profile\n- Update Employee Profile\n- Delete Employee Profile"
 		},
 		{
 			"name": "Education",
@@ -468,12 +468,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/educations/allEmployeeEducations",
+							"raw": "http://localhost:3000/api/educations/allEmployeeEducations",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -503,12 +503,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/educations/by_employee_id/1",
+							"raw": "http://localhost:3000/api/educations/by_employee_id/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -539,12 +539,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/educations/1",
+							"raw": "http://localhost:3000/api/educations/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -584,12 +584,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/educations/addEmployeeEducation",
+							"raw": "http://localhost:3000/api/educations/addEmployeeEducation",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -629,12 +629,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/educations/3",
+							"raw": "http://localhost:3000/api/educations/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -665,12 +665,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/educations/3",
+							"raw": "http://localhost:3000/api/educations/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"educations",
@@ -706,12 +706,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/allEmployeeFamilys",
+							"raw": "http://localhost:3000/api/employeeFamilys/allEmployeeFamilys",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -741,12 +741,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/by_employee_id/1",
+							"raw": "http://localhost:3000/api/employeeFamilys/by_employee_id/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -777,12 +777,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/1",
+							"raw": "http://localhost:3000/api/employeeFamilys/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -822,12 +822,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/addEmployeeFamily",
+							"raw": "http://localhost:3000/api/employeeFamilys/addEmployeeFamily",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -867,12 +867,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/4",
+							"raw": "http://localhost:3000/api/employeeFamilys/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -903,12 +903,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/employeeFamilys/4",
+							"raw": "http://localhost:3000/api/employeeFamilys/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
 								"api",
 								"employeeFamilys",
@@ -920,7 +920,26 @@
 					"response": []
 				}
 			],
-			"description": "Data ini mengacu pada data keluarga employee yang merujuk pada employee_family Model dan tabel employee_families pada database. Data education employee memiliki 15 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee family\n2. employee_id (Foreign Key) : identifier employee\n3. name : nama employee family (person)\n4. identifier : nomor kependudukan employee family\n5. job : pekerjaan employee family\n6. place_of_birth : tempat lahir employee family\n7. date_of_birth : tanggal lahir employee family\n8. religion : agama employee family\n9. is_life : keterangan apakah employee family masih hidup (false : sudah meninggal, true : masih hidup)\n10. is_divorced : keterangan apakah employee family sudah bercerai (false : tidak bercerai, true : sudah bercerai)\n11. created_by : keterangan pembuat data\n12. updated_by : keterangan pengedit data\n13. created_at : keterangan waktu data employee family dibuat\n14. updated_at : keterangan waktu data employee family terakhir kali diedit\n    \n\nTerdapat 6 operasi/perintah yang dilakukan pada data employee family yaitu:\n\n- Get All Employee's Families\n- Get Employee's Family\n- Get Family Detail\n- Create Employee Family\n- Update Employee Family\n- Delete Employee Family"
+			"description": "Data ini mengacu pada data keluarga employee yang merujuk pada employee_family Model dan tabel employee_families pada database. Data education employee memiliki 15 atribut yaitu:\n\n1. Id (Primary Key) : identifier employee family\n2. employee_id (Foreign Key) : identifier employee\n3. name : nama employee family (person)\n4. identifier : nomor kependudukan employee family\n5. job : pekerjaan employee family\n6. place_of_birth : tempat lahir employee family\n7. date_of_birth : tanggal lahir employee family\n8. religion : agama employee family\n9. is_life : keterangan apakah employee family masih hidup (false : sudah meninggal, true : masih hidup)\n10. relation_status : status hubungan employee family (suami/istri/anak/anak sambung)\n    \n11. created_by : keterangan pembuat data\n12. updated_by : keterangan pengedit data\n13. created_at : keterangan waktu data employee family dibuat\n14. updated_at : keterangan waktu data employee family terakhir kali diedit\n    \n\nTerdapat 6 operasi/perintah yang dilakukan pada data employee family yaitu:\n\n- Get All Employee's Families\n- Get Employee's Family\n- Get Family Detail\n- Create Employee Family\n- Update Employee Family\n- Delete Employee Family"
+		},
+		{
+			"name": "Root URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
