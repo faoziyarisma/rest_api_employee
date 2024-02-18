@@ -1,4 +1,0 @@
-Link Sumber:
-- Inner Join Sequelize : https://www.slingacademy.com/article/how-to-use-inner-join-in-sequelize-js/
-- Left Join Sequelize : https://www.slingacademy.com/article/how-to-use-inner-join-in-sequelize-js/#google_vignette
-- Concatenate Columns in Postgres : https://www.slingacademy.com/article/how-to-use-inner-join-in-sequelize-js/#google_vignette
